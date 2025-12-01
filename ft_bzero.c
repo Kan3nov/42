@@ -6,13 +6,13 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 16:47:35 by klafi             #+#    #+#             */
-/*   Updated: 2025/11/28 16:50:21 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/01 12:45:59 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void s[], size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s[], 0, n);
+	ft_memset(s, 0, n);
 }

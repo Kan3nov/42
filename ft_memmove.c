@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
+/*   By: klafi <klafi@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/28 16:18:46 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/01 12:46:56 by klafi            ###   ########.fr       */
+/*   Created: 2025/12/01 13:56:05 by klafi             #+#    #+#             */
+/*   Updated: 2025/12/01 14:30:46 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int	isdigit(int c)
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+void *memmove(void *dest, const void *src, size_t n)
 {
-	if (c <= '9' && c >= '0')
-		return (1);
-	return (0);
+	unsigned char	a[n];
+	int	index;
+
+	index = 0;
+	while (n-- != 0)
+	{
+		a[index] = *(unsigned char*)(dest + index);
+		index++;
+	}
+	return dest;
 }

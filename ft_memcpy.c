@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
+/*   By: klafi <klafi@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/28 16:18:46 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/01 12:46:56 by klafi            ###   ########.fr       */
+/*   Created: 2025/12/01 12:46:23 by klafi             #+#    #+#             */
+/*   Updated: 2025/12/01 13:55:59 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	isdigit(int c)
+#include <stdio.h>
+
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c <= '9' && c >= '0')
-		return (1);
-	return (0);
+	int	index = 0;
+	while (index < n)
+	{
+		*(unsigned char*)(dest + index) = *(unsigned char*)(src + index);
+		index++;
+	}
+	return (dest);
 }
