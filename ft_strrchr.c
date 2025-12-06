@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klafi <klafi@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 13:56:05 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/04 20:26:26 by klafi            ###   ########.fr       */
+/*   Created: 2025/12/05 18:36:34 by klafi             #+#    #+#             */
+/*   Updated: 2025/12/05 18:59:57 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (dest > src && dest <= src + n - 1)
+	int		index;
+	char	*lop;
+
+	index = 0;
+	lop = NULL;
+	while (*(s + index))
 	{
-		while (n > 0)
-		{
-			*(unsigned char *)(dest + n - 1) = *(unsigned char *)(src + n - 1);
-			n--;
-		}
+		if (*(s + index) == c)
+			lop = (char *)(s + index);
+		index++;
 	}
-	else
-		ft_memcpy(dest, src, n);
-	return (dest);
+	if (c == 0)
+		lop = (char *)(s + index);
+	return (lop);
 }

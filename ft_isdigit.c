@@ -6,12 +6,12 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 16:18:46 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/01 12:46:56 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/05 15:07:12 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);
