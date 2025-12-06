@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 16:14:35 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/05 15:07:04 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/06 13:39:11 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <ctype.h>
+# include <bsd/string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 void	*ft_memset(void *s, int c, size_t n);
